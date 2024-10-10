@@ -1,6 +1,6 @@
 import React from 'react';
 import './transactionHistory.css'; 
-
+import { useNavigate } from 'react-router-dom';
 const transactions = [
   { transaction: 'Rent', id: '#7890328', amount: '- 13.000 dt', date: '16 Jan 2:30pm', color: 'red' },
   { transaction: 'Technologie et logiciels', id: '#3948509', amount: '- 24.000 dt', date: '15 Jan 3:30pm', color: 'red' },
@@ -8,13 +8,17 @@ const transactions = [
 ];
 
 const TransactionHistory = () => {
+  const navigate = useNavigate();
   return (
+    
     <div className="transaction-history">
       <div className="transaction-header">
         <h3>Transaction History</h3>
         <div className="transaction-buttons">
           <button className="view-all-btn">View All</button>
-          <button className="add-transaction-btn">Add transaction</button>
+          <button className="add-transaction-btn" onClick={() => navigate('/addTransaction')}>
+            Add transaction
+          </button>
         </div>
       </div>
       
@@ -26,7 +30,7 @@ const TransactionHistory = () => {
             <th>Amount</th>
             <th>Date</th>
           </tr>
-        </thead>
+        </thead> b
         <tbody>
           {transactions.map((item, index) => (
             <tr key={index}>

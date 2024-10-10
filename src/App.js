@@ -9,6 +9,7 @@ import Deadlines from './components/deadlines/deadlines';
 import ProjectList from './components/projectlist/projectList';
 import './App.css'; 
 import TransactionHistory from './components/transactionHistory/transactionHistory';
+import AddTransaction from './components/addTransaction/addTransaction';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         {/*  <Route path="/projects" element={<ProjectList />} />*/}
           <Route path="/transactions" element={<TransactionHistory />} />
+          <Route path="/addTransaction" element={<AddTransaction />} />
           </Routes>
         </div>
       </div>

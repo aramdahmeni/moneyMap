@@ -30,7 +30,11 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         {/*  <Route path="/projects" element={<ProjectList />} />*/}
           <Route path="/transactions" element={<TransactionHistory />} />
+<<<<<<< HEAD
           <Route path="/addTransaction" element={<AddTransaction />} />
+=======
+          <Route path="/projects" element={<ProjectList />} />
+>>>>>>> 40aaa82aab6845b34eebaa31e539e35bced05c20
           </Routes>
         </div>
       </div>

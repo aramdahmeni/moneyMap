@@ -7,6 +7,8 @@ import Dashboard from './components/dashboard/dashboard';
 import StatsCard from './components/statsCard/StatsCard'; 
 import Deadlines from './components/deadlines/deadlines';  
 import ProjectList from './components/projectlist/projectList';
+import SelectedProject from './components/projectlist/selectedProject'
+import Login from './components/login/login'
 import './App.css'; 
 import TransactionHistory from './components/transactionHistory/transactionHistory';
 
@@ -17,19 +19,13 @@ function App() {
         <Sidebar />
         <div className="content">
 
-{/*
-          <div>
-          <TransactionHistory />
-          </div>
-          <div>
-            <ProjectList/> </div>
-*/}
           <Routes>
           <Route path="/" element={<Navigate to="/dashboard" />} />
+          <Route path='/login' element={<Login/>} />
           <Route path="/dashboard" element={<Dashboard />} />
-        {/*  <Route path="/projects" element={<ProjectList />} />*/}
           <Route path="/transactions" element={<TransactionHistory />} />
           <Route path="/projects" element={<ProjectList />} />
+          <Route path="/project" element={<SelectedProject />} />
           </Routes>
         </div>
       </div>

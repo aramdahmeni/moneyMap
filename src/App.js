@@ -18,7 +18,7 @@ function App() {
       <div className="App">
         <Sidebar />
         <div className="content">
-
+          {/*side bar tetna7a fel login mezelet*/}
           <Routes>
           <Route path="/" element={<Navigate to="/dashboard" />} />
           <Route path='/login' element={<Login/>} />

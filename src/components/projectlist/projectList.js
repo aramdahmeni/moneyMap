@@ -1,5 +1,7 @@
 import React from 'react';
 import './projectList.css';
+import { Link } from 'react-router-dom';
+
 
 const projects = [
   {
@@ -62,7 +64,10 @@ const ProjectList = () => {
             <p className={project.status === 'Ongoing' ? 'status ongoing' : 'status'}>{project.status}</p>
             <p>{project.manager}</p>
             <p>{project.deadline}</p>
-            <button className="details-button">Details</button>
+            <Link to={`/project`}>
+  <button className="details-button">Details</button>
+</Link>
+
           </div>
         ))}
       </div>

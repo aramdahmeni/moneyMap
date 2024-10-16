@@ -1,7 +1,6 @@
 import React from 'react';
 import './projectList.css';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
 
 const projects = [
   {
@@ -28,6 +27,12 @@ const projects = [
 ];
 
 const ProjectList = () => {
+  const navigate = useNavigate(); // Correct usage of useNavigate hook
+
+  const handleAddProjectClick = () => {
+    navigate('/addproject'); // Correct way to programmatically navigate
+  };
+
   return (
     <div className="project-list-container">
       {/* Stats Section */}
@@ -47,7 +52,17 @@ const ProjectList = () => {
       </div>
 
       {/* Project Table */}
-      <h2>Project List</h2>
+      <div className='projectList'>
+        <div className="list-header">
+          <h3>Project List</h3>
+        </div>
+        <div className="list-buttons">
+          <button className="add-list-btn" onClick={handleAddProjectClick}>
+            Add project
+          </button>
+        </div>
+      </div>
+
       <div className="project-table">
         <div className="table-header">
           <p>Project Name</p>
@@ -65,9 +80,8 @@ const ProjectList = () => {
             <p>{project.manager}</p>
             <p>{project.deadline}</p>
             <Link to={`/project`}>
-  <button className="details-button">Details</button>
-</Link>
-
+              <button className="details-button">Details</button>
+            </Link>
           </div>
         ))}
       </div>

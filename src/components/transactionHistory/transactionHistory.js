@@ -15,7 +15,6 @@ const TransactionHistory = () => {
       <div className="transaction-header">
         <h3>Transaction History</h3>
         <div className="transaction-buttons">
-          <button className="view-all-btn">View All</button>
           <button className="add-transaction-btn" onClick={() => navigate('/addTransaction')}>
             Add transaction
           </button>

@@ -4,15 +4,15 @@ import { Navigate } from 'react-router-dom';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Sidebar from './components/sidebar/sideBar';
 import Dashboard from './components/dashboard/dashboard';
-import StatsCard from './components/statsCard/StatsCard'; 
-import Deadlines from './components/deadlines/deadlines';  
 import ProjectList from './components/projectlist/projectList';
 import SelectedProject from './components/projectlist/selectedProject'
 import Login from './components/login/login'
-import './App.css'; 
 import TransactionHistory from './components/transactionHistory/transactionHistory';
 import AddTransaction from './components/addTransaction/addTransaction';
+import AddProject from './components/projectlist/addProject';
 
+
+import './App.css'; 
 function App() {
   return (
     <Router>
@@ -25,15 +25,13 @@ function App() {
           <Route path='/login' element={<Login/>} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/transactions" element={<TransactionHistory />} />
-<<<<<<< HEAD
+
           <Route path="/addTransaction" element={<AddTransaction />} />
-=======
+
           <Route path="/projects" element={<ProjectList />} />
-<<<<<<< HEAD
->>>>>>> 40aaa82aab6845b34eebaa31e539e35bced05c20
-=======
+          {/*selected project lezemha id*/}
           <Route path="/project" element={<SelectedProject />} />
->>>>>>> 00bb5ec747c867b38cefe271f79d05649a75f528
+          <Route path="/addProject" element={<AddProject />} />
           </Routes>
         </div>
       </div>
